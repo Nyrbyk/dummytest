@@ -2,6 +2,7 @@
  * @author Pascal
  */
 
+// Helper for AJAX transaction
 function getXMLHttpRequest() {
     var xhr = null;
      
@@ -23,7 +24,7 @@ function getXMLHttpRequest() {
     return xhr;
 }
 
-
+// AJAX call intialisation 
 function request(callback, containerNode) {
     var xhr = getXMLHttpRequest();
      
@@ -32,13 +33,15 @@ function request(callback, containerNode) {
             callback(xhr.responseText, containerNode);
         }
     };
-     
+    // Note POST isn't working 
     xhr.open("GET", "main.py/get_info", true);
 	xhr.setRequestHeader("Content-Type", "text/plain");  
     xhr.send("3");
 }
  
 MyCounter = 1;
+
+// AJAX callback function
 function readData(sData, containerNode) {
     // On peut maintenant traiter les données sans encombrer l'objet XHR.
     //alert(sData);
@@ -48,7 +51,7 @@ function readData(sData, containerNode) {
 
 }
  
-
+// link to HTML button. Entry point
 function MyRefresh(containerNode)
 {
 	//alert(containerNode.nodeValue);
