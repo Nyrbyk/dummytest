@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Framboise de la maison cassé""</title>
+		<link rel="stylesheet" href="mystyle.css" />
+		<script type="text/javascript" src="./myscripts.js"></script>
+	</head>
+	<body>
+		<h1>Framboise la maison cassée : Homepage</h1>
+		<!-- Corps de la page -->
+		<p>
+			Température <span id="Temp"> xxx </span> °C
+		</p>
+		<p>
+			Humidity <span id="Humi"> xxx </span> %
+		</p>
+		<button type="button" onclick="MyRefresh(window.document.getElementById('Temp').childNodes[0])">
+			Refresh Data !
+		</button>
+	</body>
+</html>
+<!-- window.document.getElementById("Temp").childNodes[0]-->
